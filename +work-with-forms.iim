@@ -1,0 +1,18 @@
+VERSION BUILD=8031994
+'переходим на страницу с которой будем работать
+URL GOTO=http://www.example.com
+
+'Вводим данные в текстовое поле
+TAG POS=1 TYPE=INPUT:TEXT FORM=ID:demo ATTR=ID:name CONTENT="Вводим тект"
+
+'Выбираем в выпадающем списке значение
+TAG POS=1 TYPE=SELECT FORM=ID:demo ATTR=ID:select1 CONTENT=%Значение 3 
+
+'Выбираем несколько значений в выпадающем списке
+TAG POS=1 TYPE=SELECT FORM=ID:demo ATTR=ID:select2 CONTENT=%значение 1:%значение 2:%значение 3
+
+'Отмечаем радио-кнопочку
+TAG POS=1 TYPE=INPUT:RADIO FORM=ID:demo ATTR=NAME:radio1 CONTENT=YES
+
+'Заолняем элемент textarea
+TAG POS=1 TYPE=TEXTAREA FORM=ID:demo ATTR=NAME:textarea1 CONTENT=текст

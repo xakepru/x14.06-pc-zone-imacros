@@ -1,0 +1,25 @@
+VERSION  BUILD=7500718 RECORDER=FX
+
+'переходим на страницу с формами,которые нужно заполнять
+
+URL GOTO=http://www.example.com
+
+'Указываем имя файла CSV из которого будем считывать данные
+
+SET !DATASOURCE data.csv
+
+'Указываем количество итераций цикла
+
+SET !LOOP 10
+
+'Присваиваем номеру строки данных порядковый номер итерации цикла
+
+SET !DATASOURCE_LINE {{!LOOP}}
+
+'Заполняем формы (COl1 - первый столбец CSV-файла и т.д.)
+TAG POS=1 TYPE=INPUT:TEXT FORM=ID:demo ATTR=NAME:name CONTENT={{!COL1}}
+TAG POS=1 TYPE=INPUT:TEXT FORM=ID:demo ATTR=NAME:surname CONTENT={{!COL2}}
+
+'Нажимаем кнопку Submit, чтобы отправить введенные данные на сервер
+TAG POS=1 TYPE=BUTTON:submit FORM=ID:demo ATTR=TXT:Submit
+

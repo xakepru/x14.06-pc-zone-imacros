@@ -1,0 +1,9 @@
+VERSION BUILD=8031994
+'Идем на страницу, из которой будем извлекать данные
+URL GOTO=http://www.example.com
+'Извлекаем содержимое абзаца в HTML-файл
+TAG POS=1 TYPE=P  EXTRACT=HTM  
+SAVEAS TYPE=EXTRACT FOLDER=* FILE=sometext.html
+'Извлекаем текст из формы в txt-файл        
+TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:form1 ATTR=NAME:abc EXTRACT=TXT 
+SAVEAS TYPE=EXTRACT FOLDER=* FILE=formtext.txt 

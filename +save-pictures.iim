@@ -1,0 +1,6 @@
+VERSION BUILD=8031994
+'Идем на страницу, с которой надо сохранить картинку
+URL GOTO=http://www.example.com
+'Сохраняем ее
+TAG POS=1 TYPE=IMG ATTR=HREF:http://somepictures.jpg  CONTENT=EVENT:SAVEITEM
+

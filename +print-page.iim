@@ -1,0 +1,6 @@
+VERSION BUILD=8031994
+'переходим на страницу, которую будем печатать
+URL GOTO=http://www.example.com 
+'печатаем с параметрами по умолчанию
+ONPRINT P=*     
+PRINT             

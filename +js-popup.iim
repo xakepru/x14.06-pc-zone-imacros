@@ -1,0 +1,6 @@
+VERSION BUILD=8031994
+'Идем на страницу, где нас ждет диалоговое окно
+URL GOTO=http://www.example.com
+'нажимаем кнопку OK
+ONDIALOG POS=1 BUTTON=OK CONTENT=   
+ 

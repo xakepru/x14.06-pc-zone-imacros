@@ -1,0 +1,11 @@
+VERSION  BUILD=7500718 RECORDER=FX
+'переходим на страницу, временные показатели загрузки которой будем измерять (результаты искать в - Imacros\Downloads\performance_Stopwatch.csv)
+URL GOTO=http://www.example.com
+'Замеряем время на полную загрузку страницы
+STOPWATCH ID=Total
+'Вводим свой email в форму
+TAG POS=1 TYPE=INPUT:TEXT FORM=ID:demo ATTR=NAME:email CONTENT=irairache@gmail.com 
+'Нажимаем на кнопку отправить и замеряем время на ответ сервера
+TAG POS=1 TYPE=BUTTON:SUBMIT FORM=ID:demo ATTR=TXT:Submit
+STOPWATCH ID=SubmitData 
+

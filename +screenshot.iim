@@ -1,0 +1,7 @@
+VERSION  BUILD=7500718 RECORDER=FX
+'Идем на страницу, с которой будем делать скриншоты
+URL GOTO=http://www.example.com
+'делаем скриншот формы для ввода email
+TAG POS=1 TYPE=INPUT:TEXT FORM=ID:demo ATTR=NAME:email CONTENT=EVENT:SAVE_ELEMENT_SCREENSHOT 
+'сохраняем его с именем текущей временной метки в папке по умолчанию
+SAVEAS TYPE=BMP FOLDER=* FILE={!NOW:yyyymmdd_hhnnss}}.bmp 

@@ -1,0 +1,8 @@
+VERSION BUILD=8031994
+'переходим на страницу с таблицей, данные изкоторой будем сохранять
+URL GOTO=http://www.example.com
+'Выделяем таблицу и кладем ее содержимое в переменную EXTRACT в формате TXT
+TAG POS=2 TYPE=TABLE ATTR=TXT:* EXTRACT=TXT
+'кладем это содержимое в csv-файл (в папку по умолчанию)
+SAVEAS TYPE=EXTRACT FOLDER=* FILE=mytable_{{!NOW:yymmdd_hhnnss}}.csv
+
